@@ -35,9 +35,9 @@ class catOrdog(CreateView):
 
 def catOrdog_result(req):
     img_latest = Checkimage.objects.order_by("-createDate")[:1]
-    target_pred = is_cat_or_dog()
+    for img in img_latest:
+        img.pred_val = is_cat_or_dog()
     context = {
         "img_latest": img_latest,
-        "target_pred": target_pred,
     }
     return render(req, "catordog_result.html", context=context)
