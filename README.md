@@ -16,6 +16,9 @@ post_image_api = 'http://127.0.0.1:8000/blog/catdogapi/'
 
 to upload image to the server, you need to encrypt the image with base64
 ```python
+import requests
+import base64
+import json
 
 def get_recent_predict_result():
     data = (requests.get(get_Recent_predict_restlt_api)).json()
