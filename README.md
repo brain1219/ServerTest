@@ -7,6 +7,6 @@ YuHyun7, brain1219
 Create and run server for CatAndDog prediction model
 
 ### Library with
-Django, Rest_Framework, for django server
+Django, Rest_Framework, for django server<br/>
 pytorch, torchvision, pillow, numpy, pandas for cat and dog prediction model
  
