@@ -29,6 +29,7 @@ DEBUG = True
 ALLOWED_HOSTS = [
     '192.168.56.1',
     ".run.goorm.io",
+    "127.0.0.1",
 ]
 
 
@@ -43,6 +44,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     "blog.apps.BlogConfig",
     "widget_tweaks",
+    "rest_framework",
 ]
 
 MIDDLEWARE = [

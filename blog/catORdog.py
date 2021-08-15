@@ -105,6 +105,11 @@ def is_cat_or_dog():
         target_pred = sample_pred[0][0]
     else:
         target_pred = 2.0
+
+    if len(test_files)>0:
+        for item in test_files:
+            os.remove(os.path.join(test_dir, item))
+
     return target_pred
 
 # target_pred가 1이면 개, 0이면 고양이

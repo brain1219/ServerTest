@@ -38,8 +38,21 @@ class Post(models.Model):
 class Checkimage(models.Model):
     check_image = models.ImageField(upload_to="target")
     createDate = models.DateTimeField(auto_now_add=True)
-    pred_val = models.FloatField()
-    pred_val = 2.0
+    pred_val = models.FloatField(default=2.0)
     
     def get_absolute_url(self):
         return reverse("catOrdog_result")
+    
+    def __str__(self):
+        return self.check_image
+
+class CatAndDogUploadApi(models.Model):
+    check_image = models.ImageField(upload_to="target")
+    createDate = models.DateTimeField(auto_now_add=True)
+    pred_val = models.FloatField(default=2.0)
+    
+    def get_absolute_url(self):
+        return reverse("catOrdog_result")
+    
+    def __str__(self):
+        return self.check_image
